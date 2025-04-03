@@ -1,5 +1,5 @@
 ---
-name: Yaml Lint
+name: YAML Lint
 on: [push]
 jobs:
   lint-yaml:
