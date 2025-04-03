@@ -1,2 +1,3 @@
-# shared-workflows
-Github Actions workflows that are shared across Hex repositories
+# Shared GH Action workflows
+Github Actions workflows that are shared across Hex repositories.
+
