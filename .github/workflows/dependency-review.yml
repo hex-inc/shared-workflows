@@ -15,7 +15,7 @@ jobs:
         uses: actions/dependency-review-action@v4
         with:
           retry-on-snapshot-warnings: true
-          retry-on-snapshot-warnings-timeout: 120
+          retry-on-snapshot-warnings-timeout: 900
 
           vulnerability-check: true
           fail-on-severity: moderate
@@ -32,6 +32,6 @@ jobs:
             Unlicense,
             CC0-1.0
 
-          #comment-summary-in-pr: on-failure
+          comment-summary-in-pr: on-failure
 
           warn-only: true
