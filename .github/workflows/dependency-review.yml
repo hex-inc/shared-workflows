@@ -32,6 +32,6 @@ jobs:
             Unlicense,
             CC0-1.0
 
-          comment-summary-in-pr: on-failure
+          #comment-summary-in-pr: on-failure
 
           warn-only: true
