@@ -1,4 +1,4 @@
-name: 'Dependency Review'
+name: "Dependency Review"
 on:
   pull_request:
     types:
@@ -15,7 +15,7 @@ jobs:
   dependency-review:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout Repository'
+      - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Dependency Review
         uses: actions/dependency-review-action@v4
@@ -27,16 +27,29 @@ jobs:
           fail-on-severity: moderate
 
           license-check: true
-          # comma separated SPDX identifiers
+          # comma-separated SPDX identifiers
+          # https://heathermeeker.com/the-license-list/
+          # DO NOT ADD LICENSES WITHOUT APPROVAL FROM LEGAL/SECURITY
           allow-licenses: >-
-            MIT,
+            0BSD,
+            AFL-2.1,
             Apache-2.0,
+            BlueOak-1.0.0,
             BSD-2-Clause,
             BSD-3-Clause,
+            CC-BY-3.0,
+            CC-BY-4.0,
+            CC0-1.0,
+            EPL-2.0,
             ISC,
-            Zlib,
+            MIT,
+            MIT-0,
+            MPL-2.0,
+            PSF-2.0,
+            Python-2.0,
             Unlicense,
-            CC0-1.0
+            WTFPL,
+            Zlib
 
           comment-summary-in-pr: on-failure
 
