@@ -51,6 +51,19 @@ jobs:
             WTFPL,
             Zlib
 
+          # Temporary addition due to upstream non-compliance with SPDX
+          # https://github.com/lancedb/lancedb/pull/2558
+          allow-dependencies-licenses: >-
+            pkg:npm/@lancedb/lancedb,
+            pkg:npm/@lancedb/lancedb-darwin-arm64,
+            pkg:npm/@lancedb/lancedb-darwin-x64,
+            pkg:npm/@lancedb/lancedb-linux-arm64-gnu,
+            pkg:npm/@lancedb/lancedb-linux-arm64-musl,
+            pkg:npm/@lancedb/lancedb-linux-x64-gnu,
+            pkg:npm/@lancedb/lancedb-linux-x64-musl,
+            pkg:npm/@lancedb/lancedb-win32-arm64-msvc,
+            pkg:npm/@lancedb/lancedb-win32-x64-msvc
+
           comment-summary-in-pr: on-failure
 
           warn-only: true
