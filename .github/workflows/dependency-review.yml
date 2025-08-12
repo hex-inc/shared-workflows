@@ -54,7 +54,6 @@ jobs:
           # Temporary addition due to upstream non-compliance with SPDX
           # https://github.com/lancedb/lancedb/pull/2558
           allow-dependencies-licenses: >-
-            pkg:npm/%40lancedb/lancedb
             pkg:npm/%40lancedb/lancedb,
             pkg:npm/%40lancedb/lancedb-darwin-arm64,
             pkg:npm/%40lancedb/lancedb-darwin-x64,
