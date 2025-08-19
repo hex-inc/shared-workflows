@@ -62,7 +62,7 @@ jobs:
             pkg:npm/@lancedb/lancedb-linux-x64-gnu@0.16.0,
             pkg:npm/@lancedb/lancedb-linux-x64-musl@0.16.0,
             pkg:npm/@lancedb/lancedb-win32-arm64-msvc@0.16.0,
-            pkg:npm/@lancedb/lancedb-win32-x64-msvc@0.16.0,
+            pkg:npm/@lancedb/lancedb-win32-x64-msvc@0.16.0
 
           comment-summary-in-pr: on-failure
 
