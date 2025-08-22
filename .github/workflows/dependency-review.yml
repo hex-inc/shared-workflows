@@ -54,15 +54,15 @@ jobs:
           # Temporary addition due to upstream non-compliance with SPDX
           # https://github.com/lancedb/lancedb/pull/2558
           allow-dependencies-licenses: >-
-            pkg:npm/@lancedb/lancedb@0.16.0,
-            pkg:npm/@lancedb/lancedb-darwin-arm64@0.16.0,
-            pkg:npm/@lancedb/lancedb-darwin-x64@0.16.0,
-            pkg:npm/@lancedb/lancedb-linux-arm64-gnu@0.16.0,
-            pkg:npm/@lancedb/lancedb-linux-arm64-musl@0.16.0,
-            pkg:npm/@lancedb/lancedb-linux-x64-gnu@0.16.0,
-            pkg:npm/@lancedb/lancedb-linux-x64-musl@0.16.0,
-            pkg:npm/@lancedb/lancedb-win32-arm64-msvc@0.16.0,
-            pkg:npm/@lancedb/lancedb-win32-x64-msvc@0.16.0
+            pkg:npm/%2540lancedb/lancedb,
+            pkg:npm/%2540lancedb/lancedb-darwin-arm64,
+            pkg:npm/%2540lancedb/lancedb-darwin-x64,
+            pkg:npm/%2540lancedb/lancedb-linux-arm64-gnu,
+            pkg:npm/%2540lancedb/lancedb-linux-arm64-musl,
+            pkg:npm/%2540lancedb/lancedb-linux-x64-gnu,
+            pkg:npm/%2540lancedb/lancedb-linux-x64-musl,
+            pkg:npm/%2540lancedb/lancedb-win32-arm64-msvc,
+            pkg:npm/%2540lancedb/lancedb-win32-x64-msvc
 
           comment-summary-in-pr: on-failure
 
