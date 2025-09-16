@@ -75,5 +75,6 @@ jobs:
             pkg:npm/%2540lancedb/lancedb-win32-arm64-msvc,
             pkg:npm/%2540lancedb/lancedb-win32-x64-msvc,
             pkg:npm/cookie-signature
+            pkg:npm/%2540ag-grid-enterprise
 
           comment-summary-in-pr: on-failure
