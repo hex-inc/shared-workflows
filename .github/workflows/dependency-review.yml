@@ -65,6 +65,8 @@ jobs:
           #                        (https://github.com/lancedb/lancedb/pull/2558)
           # npm/cookie-signature: Temporary addition due to ClearlyDefined error
           #                       (https://github.com/clearlydefined/curated-data/pull/29904)
+          # pypi/charset-normalizer: Temporary addition due to ClearlyDefined error
+          #                          (https://github.com/clearlydefined/curated-data/pull/29974)
           allow-dependencies-licenses: >-
             pkg:npm/%2540lancedb/lancedb,
             pkg:npm/%2540lancedb/lancedb-darwin-arm64,
@@ -76,6 +78,7 @@ jobs:
             pkg:npm/%2540lancedb/lancedb-win32-arm64-msvc,
             pkg:npm/%2540lancedb/lancedb-win32-x64-msvc,
             pkg:npm/cookie-signature,
-            pkg:npm/%2540ag-grid-enterprise/master-detail
+            pkg:npm/%2540ag-grid-enterprise/master-detail,
+            pkg:pypi/charset-normalizer
 
           comment-summary-in-pr: on-failure
