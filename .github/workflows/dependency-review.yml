@@ -85,14 +85,14 @@ jobs:
             pkg:npm/%2540lancedb/lancedb-win32-x64-msvc,
             pkg:npm/cookie-signature,
             pkg:npm/%2540ag-grid-enterprise/master-detail,
-            pkg:npm/%2540pgsql/traverse
-            pkg:npm/%2540pgsql/types
-            pkg:npm/%2540pgsql/utils
-            pkg:npm/pgsql-parser
-            pkg:npm/pgsql-deparser
-            pkg:npm/pg-proto-parser
-            pkg:npm/strfy-js
-            pkg:npm/nested-obj
+            pkg:npm/%2540pgsql/traverse,
+            pkg:npm/%2540pgsql/types,
+            pkg:npm/%2540pgsql/utils,
+            pkg:npm/pgsql-parser,
+            pkg:npm/pgsql-deparser,
+            pkg:npm/pg-proto-parser,
+            pkg:npm/strfy-js,
+            pkg:npm/nested-obj,
             pkg:pypi/charset-normalizer
 
           comment-summary-in-pr: on-failure
