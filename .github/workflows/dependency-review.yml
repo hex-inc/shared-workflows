@@ -100,7 +100,7 @@ jobs:
             pkg:npm/nested-obj,
             pkg:pypi/charset-normalizer,
             pkg:maven/com.google.errorprone/error_prone_annotations,
-            pkg:npm/canvas
+            pkg:npm/canvas,
             pkg:npm/bignumber.js
 
           comment-summary-in-pr: on-failure
