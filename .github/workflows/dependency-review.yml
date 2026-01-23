@@ -77,6 +77,7 @@ jobs:
           #       (https://github.com/clearlydefined/curated-data/pull/30203)
           # npm/canvas: Temporary addition due to ClearlyDefined error
           #             (https://github.com/clearlydefined/curated-data/pull/32066)
+          # npm/bignumber.js: ClearlyDefined error showing inaccurate license
           allow-dependencies-licenses: >-
             pkg:npm/%2540lancedb/lancedb,
             pkg:npm/%2540lancedb/lancedb-darwin-arm64,
@@ -100,5 +101,6 @@ jobs:
             pkg:pypi/charset-normalizer,
             pkg:maven/com.google.errorprone/error_prone_annotations,
             pkg:npm/canvas
+            pkg:npm/bignumber.js
 
           comment-summary-in-pr: on-failure
