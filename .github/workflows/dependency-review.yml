@@ -57,6 +57,7 @@ jobs:
             MPL-2.0,
             PSF-2.0,
             Python-2.0,
+            Python-2.0.1,
             Unlicense,
             WTFPL,
             Zlib
