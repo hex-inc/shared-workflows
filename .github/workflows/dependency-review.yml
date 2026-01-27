@@ -78,21 +78,22 @@ jobs:
           # npm/canvas: Temporary addition due to ClearlyDefined error
           #             (https://github.com/clearlydefined/curated-data/pull/32066)
           # npm/bignumber.js: ClearlyDefined error showing inaccurate license
+          # pypi/chardet: LGPL-2.1-or-later -- only approving as a one-off
           allow-dependencies-licenses: >-
-            pkg:npm/%2540lancedb/lancedb,
-            pkg:npm/%2540lancedb/lancedb-darwin-arm64,
-            pkg:npm/%2540lancedb/lancedb-darwin-x64,
-            pkg:npm/%2540lancedb/lancedb-linux-arm64-gnu,
-            pkg:npm/%2540lancedb/lancedb-linux-arm64-musl,
-            pkg:npm/%2540lancedb/lancedb-linux-x64-gnu,
-            pkg:npm/%2540lancedb/lancedb-linux-x64-musl,
-            pkg:npm/%2540lancedb/lancedb-win32-arm64-msvc,
-            pkg:npm/%2540lancedb/lancedb-win32-x64-msvc,
+            pkg:npm/@lancedb/lancedb,
+            pkg:npm/@lancedb/lancedb-darwin-arm64,
+            pkg:npm/@lancedb/lancedb-darwin-x64,
+            pkg:npm/@lancedb/lancedb-linux-arm64-gnu,
+            pkg:npm/@lancedb/lancedb-linux-arm64-musl,
+            pkg:npm/@lancedb/lancedb-linux-x64-gnu,
+            pkg:npm/@lancedb/lancedb-linux-x64-musl,
+            pkg:npm/@lancedb/lancedb-win32-arm64-msvc,
+            pkg:npm/@lancedb/lancedb-win32-x64-msvc,
             pkg:npm/cookie-signature,
-            pkg:npm/%2540ag-grid-enterprise/master-detail,
-            pkg:npm/%2540pgsql/traverse,
-            pkg:npm/%2540pgsql/types,
-            pkg:npm/%2540pgsql/utils,
+            pkg:npm/@ag-grid-enterprise/master-detail,
+            pkg:npm/@pgsql/traverse,
+            pkg:npm/@pgsql/types,
+            pkg:npm/@pgsql/utils,
             pkg:npm/pgsql-parser,
             pkg:npm/pgsql-deparser,
             pkg:npm/pg-proto-parser,
@@ -101,6 +102,17 @@ jobs:
             pkg:pypi/charset-normalizer,
             pkg:maven/com.google.errorprone/error_prone_annotations,
             pkg:npm/canvas,
-            pkg:npm/bignumber.js
+            pkg:npm/bignumber.js,
+            pkg:pypi/chardet
+
+          # Known vulnerabilities we're ok with ignoring.
+          # These are generally because they are in an older python kernel
+          # version that we aren't upgrading because it's EOL (and officially
+          # unsupported by us).
+          # filelock: https://github.com/advisories/GHSA-w853-jp5j-5j7f
+          # filelock: https://github.com/advisories/GHSA-qmgc-5h2g-mvrw
+          allow-ghsas: >-
+            GHSA-w853-jp5j-5j7f,
+            GHSA-qmgc-5h2g-mvrw
 
           comment-summary-in-pr: on-failure
