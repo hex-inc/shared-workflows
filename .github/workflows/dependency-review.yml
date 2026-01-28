@@ -81,6 +81,14 @@ jobs:
           # npm/bignumber.js: ClearlyDefined error showing inaccurate license
           # pypi/chardet: LGPL-2.1-or-later -- only approving as a one-off
           # npm/@img/sharp*: LGPL-3.0-or-later -- only approving as a one-off; for local dev using claude code
+          # pypi/protobuf: BSD-3-Clause AND LicenseRef-scancode-protobuf -- permitted for standard usage
+          # pypi/aiohappyeyeballs: 0BSD AND BSD-3-Clause AND others -- permitted for standard usage
+          # pypi/fonttools: Apache-2.0 AND BSD-3-Clause AND MIT AND OFL-1.1 -- permitted for standard usage
+          # pypi/psycopg2: LGPL-2.0-or-later AND LGPL-3.0-or-later -- approving as a one-off
+          # pypi/pyproj: LicenseRef-scancode-us-govt-public-domain AND MIT -- permitted for standard usage
+          # pypi/pytz: MIT AND ZPL-2.1 -- permitted for standard usage
+          # pypi/shapely: BSD-3-Clause AND LGPL-2.1-only -- approving as a one-off
+          # pypi/typing-extensions: Python-2.0 AND GPL-1.0-or-later AND others -- permitted for standard usage
           allow-dependencies-licenses: >-
             pkg:npm/@lancedb/lancedb,
             pkg:npm/@lancedb/lancedb-darwin-arm64,
@@ -107,7 +115,15 @@ jobs:
             pkg:npm/bignumber.js,
             pkg:pypi/chardet,
             pkg:npm/@img/sharp-libvips-linuxmusl-arm64,
-            pkg:npm/@img/sharp-libvips-linuxmusl-x64
+            pkg:npm/@img/sharp-libvips-linuxmusl-x64,
+            pkg:pypi/protobuf,
+            pkg:pypi/aiohappyeyeballs,
+            pkg:pypi/fonttools,
+            pkg:pypi/psycopg2,
+            pkg:pypi/pyproj,
+            pkg:pypi/pytz,
+            pkg:pypi/shapely,
+            pkg:pypi/typing-extensions
 
           # Known vulnerabilities we're ok with ignoring.
           # These are generally because they are in an older python kernel
