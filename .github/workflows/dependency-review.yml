@@ -85,6 +85,7 @@ jobs:
           # npm/bignumber.js: ClearlyDefined error showing inaccurate license
           # pypi/chardet: LGPL-2.1-or-later -- only approving as a one-off
           # npm/@img/sharp*: LGPL-3.0-or-later -- only approving as a one-off; for local dev using claude code
+          # pypi/aiohappyeyeballs: License detection is wrong (incorrectly detecting unknown license)
           # pypi/psycopg2: LGPL-2.0-or-later AND LGPL-3.0-or-later -- only approving as a one-off
           # pypi/shapely: LGPL-2.1-only -- only approving as a one-off
           # pypi/typing-extensions: License detection is wrong (not GPL)
@@ -115,6 +116,7 @@ jobs:
             pkg:pypi/chardet,
             pkg:npm/@img/sharp-libvips-linuxmusl-arm64,
             pkg:npm/@img/sharp-libvips-linuxmusl-x64,
+            pkg:pypi/aiohappyeyeballs,
             pkg:pypi/psycopg2,
             pkg:pypi/shapely,
             pkg:pypi/typing-extensions
