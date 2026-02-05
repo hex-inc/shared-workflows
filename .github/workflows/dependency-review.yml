@@ -53,9 +53,11 @@ jobs:
             LicenseRef-scancode-generic-cla,
             LicenseRef-scancode-protobuf,
             LicenseRef-scancode-public-domain,
+            LicenseRef-scancode-secret-labs-2011,
             LicenseRef-scancode-us-govt-public-domain,
             MIT,
             MIT-0,
+            MIT-CMU,
             MPL-2.0,
             OFL-1.1,
             PSF-2.0,
@@ -89,6 +91,9 @@ jobs:
           # pypi/psycopg2: LGPL-2.0-or-later AND LGPL-3.0-or-later -- only approving as a one-off
           # pypi/shapely: LGPL-2.1-only -- only approving as a one-off
           # pypi/typing-extensions: License detection is wrong (not GPL)
+          # pypi/astroid: LGPL-2.1-only -- only approving as a one-off
+          # pypi/pylint: CC-BY-SA-4.0 AND GPL-2.0-only -- only approving as a one-off
+          # pypi/pyzmq: LGPL-3.0-only AND LicenseRef-github-NOASSERTION -- only approving as a one-off
           allow-dependencies-licenses: >-
             pkg:npm/@lancedb/lancedb,
             pkg:npm/@lancedb/lancedb-darwin-arm64,
@@ -119,7 +124,10 @@ jobs:
             pkg:pypi/aiohappyeyeballs,
             pkg:pypi/psycopg2,
             pkg:pypi/shapely,
-            pkg:pypi/typing-extensions
+            pkg:pypi/typing-extensions,
+            pkg:pypi/astroid,
+            pkg:pypi/pylint,
+            pkg:pypi/pyzmq
 
           # Known vulnerabilities we're ok with ignoring.
           # These are generally because they are in an older python kernel
