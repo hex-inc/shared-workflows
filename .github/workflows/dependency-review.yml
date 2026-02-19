@@ -51,6 +51,7 @@ jobs:
             EPL-2.0,
             HPND-Markus-Kuhn,
             ISC,
+            LicenseRef-bad-mitapache-2.0,
             LicenseRef-scancode-generic-cla,
             LicenseRef-scancode-protobuf,
             LicenseRef-scancode-public-domain,
