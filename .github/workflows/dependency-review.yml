@@ -52,6 +52,7 @@ jobs:
             HPND-Markus-Kuhn,
             ISC,
             LicenseRef-bad-mitapache-2.0,
+            LicenseRef-scancode-dco-1.1,
             LicenseRef-scancode-generic-cla,
             LicenseRef-scancode-protobuf,
             LicenseRef-scancode-public-domain,
