@@ -28,7 +28,7 @@ jobs:
             }}
           head-ref: ${{ github.event.pull_request.head.sha || github.ref }}
           retry-on-snapshot-warnings: true
-          retry-on-snapshot-warnings-timeout: 420
+          retry-on-snapshot-warnings-timeout: 480
 
           vulnerability-check: true
           fail-on-severity: moderate
