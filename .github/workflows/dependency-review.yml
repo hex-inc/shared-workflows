@@ -1,3 +1,4 @@
+---
 name: "Dependency Review"
 on:
   pull_request:
@@ -17,7 +18,62 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
+      - name: Check for dependency file changes
+        if: github.event.pull_request.head.ref != github.event.repository.default_branch
+        id: check-deps
+        run: |
+          git fetch --depth=1 origin "${{ github.event.pull_request.base.sha }}"
+          CHANGED_FILES=$(git diff --name-only "${{ github.event.pull_request.base.sha }}" HEAD)
+          echo "Changed files:"
+          echo "$CHANGED_FILES"
+
+          DEP_PATTERNS=(
+            # JavaScript / TypeScript
+            'package-lock\.json$'
+            'yarn\.lock$'
+            'pnpm-lock\.yaml$'
+            'bun\.lockb$'
+            'npm-shrinkwrap\.json$'
+            # Python
+            'requirements([_-].*)?\.txt$'
+            'constraints\.txt$'
+            'Pipfile(\.lock)?$'
+            'pyproject\.toml$'
+            'poetry\.lock$'
+            'setup\.(py|cfg)$'
+            'uv\.lock$'
+            'pdm\.lock$'
+            'poetry\.toml$'
+            'tox\.ini$'
+            # R
+            '(^|/)DESCRIPTION$'
+            'renv\.lock$'
+            # Java / Kotlin / Scala
+            'pom\.xml$'
+            'build\.gradle(\.kts)?$'
+            'settings\.gradle(\.kts)?$'
+            'gradle\.lockfile$'
+            # Rust
+            'Cargo\.(toml|lock)$'
+            # Go
+            'go\.(mod|sum)$'
+            # Dart / Flutter
+            'pubspec\.(yaml|lock)$'
+            # Helm
+            'Chart\.(yaml|lock)$'
+          )
+          REGEX=$(IFS='|'; echo "${DEP_PATTERNS[*]}")
+
+          if echo "$CHANGED_FILES" | grep -qE "$REGEX"; then
+            echo "deps_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No dependency file changes found — skipping dependency review."
+            echo "deps_changed=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Dependency Review
+        if: >-
+          github.event.pull_request.head.ref == github.event.repository.default_branch
+          || steps.check-deps.outputs.deps_changed == 'true'
         uses: actions/dependency-review-action@v4
         with:
           base-ref: >
