@@ -28,7 +28,7 @@ jobs:
 
           DEP_PATTERNS=(
             # JavaScript / TypeScript
-            'package(-lock)?\.json$'
+            'package-lock\.json$'
             'yarn\.lock$'
             'pnpm-lock\.yaml$'
             'bun\.lockb$'
