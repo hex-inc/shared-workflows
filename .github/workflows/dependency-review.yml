@@ -1,12 +1,6 @@
 ---
 name: "Dependency Review"
-on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - labeled
-      - unlabeled
+on: [pull_request]
 
 permissions:
   contents: read
