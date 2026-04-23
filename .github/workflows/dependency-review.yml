@@ -14,7 +14,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref }}
+  group: ${{ github.workflow }}-${{ github.repository }}-${{ github.event.number }}
   cancel-in-progress: true
 
 jobs:
