@@ -195,8 +195,8 @@ jobs:
             pkg:pypi/pylint,
             pkg:pypi/pyzmq,
             pkg:npm/glob,
-            pkg:npm/@cspell/dict-en-common-misspellings
-            pkg:npm/@trpc/server
+            pkg:npm/@cspell/dict-en-common-misspellings,
+            pkg:npm/@trpc/server,
             pkg:npm/@trpc/client
 
           # Known vulnerabilities we're ok with ignoring.
