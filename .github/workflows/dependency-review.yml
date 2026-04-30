@@ -158,6 +158,8 @@ jobs:
           # pypi/pyzmq: LGPL-3.0-only AND LicenseRef-github-NOASSERTION -- only approving as a one-off
           # npm/glob: CC-BY-SA-4.0 -- A one-off bypass since we're not shipping code with it
           # npm/@cspell/dict-en-common-misspellings: LicenseRef-bad-cc-by-sa-4.0 -- Not shipping in code
+          # npm/@trpc/{server|client}: Temporary addition due to upstream non-compliance with SPDX
+          #                            The library defines an MIT license for the whole project.
           allow-dependencies-licenses: >-
             pkg:npm/@lancedb/lancedb,
             pkg:npm/@lancedb/lancedb-darwin-arm64,
@@ -193,7 +195,9 @@ jobs:
             pkg:pypi/pylint,
             pkg:pypi/pyzmq,
             pkg:npm/glob,
-            pkg:npm/@cspell/dict-en-common-misspellings
+            pkg:npm/@cspell/dict-en-common-misspellings,
+            pkg:npm/@trpc/server,
+            pkg:npm/@trpc/client
 
           # Known vulnerabilities we're ok with ignoring.
           # These are generally because they are in an older python kernel
