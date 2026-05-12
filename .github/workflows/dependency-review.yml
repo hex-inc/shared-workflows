@@ -160,6 +160,9 @@ jobs:
           # npm/@cspell/dict-en-common-misspellings: LicenseRef-bad-cc-by-sa-4.0 -- Not shipping in code
           # npm/@trpc/{server|client}: Temporary addition due to upstream non-compliance with SPDX
           #                            The library defines an MIT license for the whole project.
+          # npm/strtok3: MIT AND Ruby -- the Ruby License is OSI-approved and permissive
+          #              (used by Ruby itself); MIT covers the strtok3 code. Approving as
+          #              a one-off rather than adding Ruby to the global allow list.
           allow-dependencies-licenses: >-
             pkg:npm/@lancedb/lancedb,
             pkg:npm/@lancedb/lancedb-darwin-arm64,
@@ -197,7 +200,8 @@ jobs:
             pkg:npm/glob,
             pkg:npm/@cspell/dict-en-common-misspellings,
             pkg:npm/@trpc/server,
-            pkg:npm/@trpc/client
+            pkg:npm/@trpc/client,
+            pkg:npm/strtok3
 
           # Known vulnerabilities we're ok with ignoring.
           # These are generally because they are in an older python kernel
