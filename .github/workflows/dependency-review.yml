@@ -79,8 +79,8 @@ jobs:
 
           if [[ "$PR_TITLE" =~ ^Revert ]] \
             || [[ "$PR_TITLE" =~ ^.+/revert ]] \
-            || [[ "$PR_BODY" == *"This reverts commit"* ]] \
-            || [[ "$PR_BODY" == *"Reverts"* ]]; then
+            || [[ "$PR_BODY" =~ ^This\ reverts\ commit ]] \
+            || [[ "$PR_BODY" =~ ^Reverts ]]; then
             echo "Revert PR detected — skipping dependency review."
             is_revert=true
           fi
