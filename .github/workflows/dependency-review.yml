@@ -19,7 +19,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v6
       - name: Check for dependency file changes
-        if: github.event.pull_request.head.ref != github.event.repository.default_branch
         id: check-deps
         run: |
           git fetch --depth=1 origin "${{ github.event.pull_request.base.sha }}"
@@ -70,10 +69,27 @@ jobs:
             echo "No dependency file changes found — skipping dependency review."
             echo "deps_changed=false" >> "$GITHUB_OUTPUT"
           fi
+      - name: Check if PR is a revert
+        id: check-revert
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title || '' }}
+          PR_BODY: ${{ github.event.pull_request.body || '' }}
+        run: |
+          is_revert=false
+
+          if [[ "$PR_TITLE" =~ ^Revert ]] \
+            || [[ "$PR_TITLE" =~ ^.+/revert ]] \
+            || [[ "$PR_BODY" =~ ^This\ reverts\ commit ]] \
+            || [[ "$PR_BODY" =~ ^Reverts ]]; then
+            echo "Revert PR detected — skipping dependency review."
+            is_revert=true
+          fi
+
+          echo "is_revert=$is_revert" >> "$GITHUB_OUTPUT"
       - name: Dependency Review
         if: >-
-          github.event.pull_request.head.ref == github.event.repository.default_branch
-          || steps.check-deps.outputs.deps_changed == 'true'
+          steps.check-deps.outputs.deps_changed == 'true'
+          && steps.check-revert.outputs.is_revert != 'true'
         uses: actions/dependency-review-action@v4
         with:
           base-ref: >
