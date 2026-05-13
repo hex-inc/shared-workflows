@@ -210,8 +210,6 @@ jobs:
           # filelock: https://github.com/advisories/GHSA-w853-jp5j-5j7f
           # filelock: https://github.com/advisories/GHSA-qmgc-5h2g-mvrw
           allow-ghsas: >-
-            GHSA-5v7r-6r5c-r473,
-            GHSA-gmq8-994r-jv83,
             GHSA-w853-jp5j-5j7f,
             GHSA-qmgc-5h2g-mvrw
 
