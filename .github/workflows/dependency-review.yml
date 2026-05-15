@@ -90,7 +90,7 @@ jobs:
         if: >-
           steps.check-deps.outputs.deps_changed == 'true'
           && steps.check-revert.outputs.is_revert != 'true'
-        uses: actions/dependency-review-action@v4
+        uses: actions/dependency-review-action@v5
         with:
           base-ref: >
             ${{
@@ -104,6 +104,7 @@ jobs:
 
           vulnerability-check: true
           fail-on-severity: moderate
+          show-patched-versions: true
 
           license-check: true
           # comma-separated SPDX identifiers
