@@ -102,7 +102,7 @@ jobs:
           retry-on-snapshot-warnings: true
           retry-on-snapshot-warnings-timeout: 480
 
-          vulnerability-check: false
+          vulnerability-check: true
           fail-on-severity: moderate
 
           license-check: true
