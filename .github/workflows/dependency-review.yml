@@ -131,6 +131,7 @@ jobs:
             LicenseRef-scancode-protobuf,
             LicenseRef-scancode-public-domain,
             LicenseRef-scancode-secret-labs-2011,
+            LicenseRef-scancode-unicode,
             LicenseRef-scancode-us-govt-public-domain,
             MIT,
             MIT-0,
