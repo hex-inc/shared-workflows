@@ -113,6 +113,7 @@ jobs:
           allow-licenses: >-
             0BSD,
             AFL-2.1,
+            Apache-1.1,
             Apache-2.0,
             Artistic-2.0,
             BlueOak-1.0.0,
