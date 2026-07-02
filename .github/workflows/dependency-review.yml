@@ -164,6 +164,9 @@ jobs:
           #                 (https://github.com/pyramation/nested-obj/pull/1)
           # maven/com.google.errorprone/error_prone_annotations: Temporary addition due to ClearlyDefined error
           #       (https://github.com/clearlydefined/curated-data/pull/30203)
+          # maven/org.jetbrains.intellij.deps/trove4j: LGPL-2.1 -- build-time transitive of
+          #       kotlin-compiler-embeddable (the Kotlin Gradle plugin); not shipped in any
+          #       runtime artifact. Only approving as a one-off.
           # npm/canvas: Temporary addition due to ClearlyDefined error
           #             (https://github.com/clearlydefined/curated-data/pull/32066)
           # npm/bignumber.js: ClearlyDefined error showing inaccurate license
@@ -205,6 +208,7 @@ jobs:
             pkg:npm/nested-obj,
             pkg:pypi/charset-normalizer,
             pkg:maven/com.google.errorprone/error_prone_annotations,
+            pkg:maven/org.jetbrains.intellij.deps/trove4j,
             pkg:npm/canvas,
             pkg:npm/bignumber.js,
             pkg:pypi/chardet,
