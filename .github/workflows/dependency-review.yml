@@ -186,6 +186,14 @@ jobs:
           # npm/strtok3: MIT AND Ruby -- the Ruby License is OSI-approved and permissive
           #              (used by Ruby itself); MIT covers the strtok3 code. Approving as
           #              a one-off rather than adding Ruby to the global allow list.
+          # maven/com.mysql/mysql-connector-j: GPL-2.0 with the Universal FOSS Exception --
+          #              the MySQL Connector/J JDBC driver. This is the SAME license Hex has
+          #              long shipped via the legacy mysql:mysql-connector-java coordinate; the
+          #              only change is Oracle's Maven coordinate rename, required to clear HIGH
+          #              CVE-2023-22102 (no fix exists on the old coordinate). The driver is
+          #              loaded at arm's length inside the data-service (separate process, its
+          #              own isolated URLClassLoader, reached only over the JDBC API) -- not
+          #              statically linked into shipped code. Approving as a one-off. (NOVA-4748)
           allow-dependencies-licenses: >-
             pkg:npm/@lancedb/lancedb,
             pkg:npm/@lancedb/lancedb-darwin-arm64,
@@ -225,7 +233,8 @@ jobs:
             pkg:npm/@cspell/dict-en-common-misspellings,
             pkg:npm/@trpc/server,
             pkg:npm/@trpc/client,
-            pkg:npm/strtok3
+            pkg:npm/strtok3,
+            pkg:maven/com.mysql/mysql-connector-j
 
           # Known vulnerabilities we're ok with ignoring.
           # These are generally because they are in an older python kernel
