@@ -248,7 +248,6 @@ jobs:
             pkg:npm/@img/sharp-win32-arm64,
             pkg:npm/@img/sharp-win32-ia32,
             pkg:npm/@img/sharp-win32-x64
-            
 
           # Known vulnerabilities we're ok with ignoring.
           # These are generally because they are in an older python kernel
