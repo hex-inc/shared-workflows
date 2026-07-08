@@ -194,6 +194,7 @@ jobs:
           #              loaded at arm's length inside the data-service (separate process, its
           #              own isolated URLClassLoader, reached only over the JDBC API) -- not
           #              statically linked into shipped code. Approving as a one-off. (NOVA-4748)
+          # npm/@img/sharp-*: License detection is wrong (not GPL)
           allow-dependencies-licenses: >-
             pkg:npm/@lancedb/lancedb,
             pkg:npm/@lancedb/lancedb-darwin-arm64,
@@ -234,7 +235,19 @@ jobs:
             pkg:npm/@trpc/server,
             pkg:npm/@trpc/client,
             pkg:npm/strtok3,
-            pkg:maven/com.mysql/mysql-connector-j
+            pkg:maven/com.mysql/mysql-connector-j,
+            pkg:npm/@img/sharp-libvips-darwin-arm64,
+            pkg:npm/@img/sharp-libvips-darwin-x64,
+            pkg:npm/@img/sharp-libvips-linux-arm,
+            pkg:npm/@img/sharp-libvips-linux-arm64,
+            pkg:npm/@img/sharp-libvips-linux-ppc64,
+            pkg:npm/@img/sharp-libvips-linux-riscv64,
+            pkg:npm/@img/sharp-libvips-linux-s390x,
+            pkg:npm/@img/sharp-libvips-linux-x64,
+            pkg:npm/@img/sharp-wasm32,
+            pkg:npm/@img/sharp-win32-arm64,
+            pkg:npm/@img/sharp-win32-ia32,
+            pkg:npm/@img/sharp-win32-x64
 
           # Known vulnerabilities we're ok with ignoring.
           # These are generally because they are in an older python kernel
