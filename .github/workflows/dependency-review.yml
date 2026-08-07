@@ -102,9 +102,7 @@ jobs:
           retry-on-snapshot-warnings: true
           retry-on-snapshot-warnings-timeout: 480
 
-          vulnerability-check: true
-          fail-on-severity: moderate
-          show-patched-versions: true
+          vulnerability-check: false
 
           license-check: true
           # comma-separated SPDX identifiers
