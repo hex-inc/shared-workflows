@@ -1,0 +1,47 @@
+---
+name: Socket Policy Sync
+
+on:
+  schedule:
+    # UTC, so 1am or 2am CT
+    - cron: "0 7 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "socket/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One sync at a time: the nightly run and a push to main can otherwise race
+# two overwrites of the same policy.
+concurrency:
+  group: socket-policy-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests==2.34.2
+
+      - name: Unit tests
+        run: python -m unittest discover -s socket
+
+      - name: Sync Socket policies
+        env:
+          SOCKET_API_KEY: ${{ secrets.SOCKET_API_KEY }}
+          SOCKET_ORG_SLUG: hex-inc
+        run: python socket/sync_socket_policies.py
