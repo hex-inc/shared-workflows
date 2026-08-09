@@ -1,0 +1,4 @@
+__pycache__/
+.DS_Store
+creds.sh
+creds_ro.sh
