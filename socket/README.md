@@ -34,7 +34,7 @@ whatever is on `main`. The UI is just an easier place to get it right.
 - `socket-license-policy.json` — allow-listed licenses
 - `pull_socket_policies.py` — Socket → repo, for step 2 above
 - `sync_socket_policies.py` — repo → Socket, run nightly by the workflow
-- `test_*.py` — `python -m unittest discover -s socket` (no dependencies)
+- `tests/` — `python -m unittest discover -s socket` (no dependencies beyond `requests`)
 
 License lists are kept sorted and the files are written exactly as
 `pull_socket_policies.py` renders them, so pulls only ever show real changes.

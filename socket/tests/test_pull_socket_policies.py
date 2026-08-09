@@ -15,7 +15,7 @@ from unittest import mock
 
 import pull_socket_policies as pull
 import sync_socket_policies as sync
-from test_sync_socket_policies import REPO_LICENSE, REPO_SECURITY, FakeSession, shuffled
+from .test_sync_socket_policies import REPO_LICENSE, REPO_SECURITY, FakeSession, shuffled
 
 
 class PullTests(unittest.TestCase):
