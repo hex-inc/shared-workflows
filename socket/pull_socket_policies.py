@@ -87,7 +87,7 @@ def update(path: Path, policy: dict, flatten: Flatten) -> bool:
 
 def main() -> None:
     session = open_session()
-    print(f"Reading policies from Socket org `{ORG}`")
+    print(f"Reading policies from Socket org `{ORG}`\n")
     live_security = fetch_security(session)
     live_license = fetch_license(session)
     written = [
@@ -96,9 +96,9 @@ def main() -> None:
     ]
 
     if not any(written):
-        print("The repo already matches Socket; nothing to commit.")
+        print("\nThe repo already matches Socket; nothing to commit.")
     else:
-        print("Review the diff, then branch, commit, and open a PR.")
+        print("\nReview the diff, then branch, commit, and open a PR.")
 
 
 if __name__ == "__main__":
