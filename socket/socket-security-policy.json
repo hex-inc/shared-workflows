@@ -109,7 +109,7 @@
       "action": "ignore"
     },
     "licenseSpdxDisj": {
-      "action": "block"
+      "action": "error"
     },
     "unsafeCopyright": {
       "action": "ignore"
