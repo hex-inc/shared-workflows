@@ -2,5 +2,7 @@
 Github Actions workflows that are shared across Hex repositories.
 
 1. Dependency Review
-    - This is used to detect & prevent the introduction of dependencies with unapproved licenses or known vulnerabilities.
+    - Enforcement on unapproved licenses
 
+2. Socket Policies
+    - Nightly sync from this repo to Socket API
