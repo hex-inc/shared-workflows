@@ -1,6 +1,8 @@
 ---
 name: YAML Lint
 on: [push]
+permissions:
+  contents: read
 jobs:
   lint-yaml:
     runs-on: ubuntu-latest
