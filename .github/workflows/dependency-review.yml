@@ -125,6 +125,7 @@ jobs:
             HPND-Markus-Kuhn,
             ISC,
             LicenseRef-bad-apache-2.0-bsd-3-clause,
+            LicenseRef-bad-bsd-3-clause-apache-2.0-mit,
             LicenseRef-bad-mitapache-2.0,
             LicenseRef-scancode-dco-1.1,
             LicenseRef-scancode-generic-cla,
