@@ -197,7 +197,10 @@ jobs:
           #              own isolated URLClassLoader, reached only over the JDBC API) -- not
           #              statically linked into shipped code. Approving as a one-off. (NOVA-4748)
           # npm/@img/sharp-*: License detection is wrong (not GPL)
+          # golang/github.com/moby/spdystream: v0.5.1 is apache-2.0 and bsd-3-clause; metadata adds unknown.
+          # https://github.com/moby/spdystream/blob/v0.5.1/NOTICE
           allow-dependencies-licenses: >-
+            pkg:golang/github.com/moby/spdystream,
             pkg:npm/@lancedb/lancedb,
             pkg:npm/@lancedb/lancedb-darwin-arm64,
             pkg:npm/@lancedb/lancedb-darwin-x64,
