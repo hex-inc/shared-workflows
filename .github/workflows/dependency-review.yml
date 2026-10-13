@@ -200,8 +200,11 @@ jobs:
           # npm/@img/sharp-*: License detection is wrong (not GPL)
           # golang/github.com/moby/spdystream: v0.5.1 is apache-2.0 and bsd-3-clause; metadata adds unknown.
           # https://github.com/moby/spdystream/blob/v0.5.1/NOTICE
+          # golang/github.com/opencontainers/go-digest: code is apache-2.0; README.md/CONTRIBUTING.md are cc-by-sa-4.0.
+          # https://github.com/opencontainers/go-digest/blob/v1.0.0/README.md#copyright-and-license
           allow-dependencies-licenses: >-
             pkg:golang/github.com/moby/spdystream,
+            pkg:golang/github.com/opencontainers/go-digest,
             pkg:npm/@lancedb/lancedb,
             pkg:npm/@lancedb/lancedb-darwin-arm64,
             pkg:npm/@lancedb/lancedb-darwin-x64,
