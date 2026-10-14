@@ -202,9 +202,12 @@ jobs:
           # https://github.com/moby/spdystream/blob/v0.5.1/NOTICE
           # golang/github.com/opencontainers/go-digest: code is apache-2.0; README.md/CONTRIBUTING.md are cc-by-sa-4.0.
           # https://github.com/opencontainers/go-digest/blob/v1.0.0/README.md#copyright-and-license
+          # golang/github.com/ghodss/yaml: mit and bsd-3-clause in one LICENSE; each is allowed on its own.
+          # https://github.com/ghodss/yaml/blob/v1.0.0/LICENSE
           allow-dependencies-licenses: >-
             pkg:golang/github.com/moby/spdystream,
             pkg:golang/github.com/opencontainers/go-digest,
+            pkg:golang/github.com/ghodss/yaml,
             pkg:npm/@lancedb/lancedb,
             pkg:npm/@lancedb/lancedb-darwin-arm64,
             pkg:npm/@lancedb/lancedb-darwin-x64,
