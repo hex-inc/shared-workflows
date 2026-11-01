@@ -170,6 +170,8 @@ jobs:
           #       runtime artifact. Only approving as a one-off.
           # maven/ch.qos.logback/{logback-classic,logback-core}: EPL-2.0 is an allowed alternative to LGPL-2.1-only.
           # https://github.com/qos-ch/logback/blob/v_1.6.6/LICENSE.txt
+          # maven/com.auth0/java-jwt: MIT; metadata incorrectly reports LicenseRef-bad-non-standard.
+          # https://github.com/auth0/java-jwt/blob/4.6.2/LICENSE
           # npm/canvas: Temporary addition due to ClearlyDefined error
           #             (https://github.com/clearlydefined/curated-data/pull/32066)
           # npm/bignumber.js: ClearlyDefined error showing inaccurate license
@@ -234,6 +236,7 @@ jobs:
             pkg:maven/org.jetbrains.intellij.deps/trove4j,
             pkg:maven/ch.qos.logback/logback-classic,
             pkg:maven/ch.qos.logback/logback-core,
+            pkg:maven/com.auth0/java-jwt,
             pkg:npm/canvas,
             pkg:npm/bignumber.js,
             pkg:pypi/chardet,
